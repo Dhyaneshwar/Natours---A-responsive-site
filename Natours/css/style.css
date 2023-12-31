@@ -41,17 +41,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -68,7 +68,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.header-primary-main {
+.header-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -78,7 +78,7 @@ body {
   animation-duration: 2s;
 }
 
-.header-primary-sub {
+.header-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
