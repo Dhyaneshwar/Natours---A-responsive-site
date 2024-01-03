@@ -10,7 +10,7 @@
     transition: all 0.2s;
     position: relative;
 
-    font-size: $default-fint-size;
+    font-size: $default-font-size;
   }
 
   &:hover {
@@ -63,7 +63,7 @@
   &:link,
   &:visited {
     transition: all 0.3s;
-    font-size: $default-fint-size;
+    font-size: $default-font-size;
     color: $color-primary;
     padding: 3px;
     border-bottom: 1px solid $color-primary;
