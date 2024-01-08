@@ -41,3 +41,77 @@
     opacity: 1;
   }
 }
+
+@keyframes onCheckedRotationBefore {
+  0% {
+    top: 0rem;
+  }
+
+  50% {
+    top: 0rem;
+    transform: rotate(-181deg);
+  }
+
+  55% {
+    top: 0rem;
+    transform: rotate(-175deg);
+  }
+
+  100% {
+    top: 0rem;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes onCheckedRotationAfter {
+  0% {
+    top: 0rem;
+  }
+
+  50% {
+    top: 0rem;
+    transform: rotate(181deg);
+  }
+
+  55% {
+    top: 0rem;
+    transform: rotate(175deg);
+  }
+
+  100% {
+    top: 0rem;
+    transform: rotate(-135deg);
+  }
+}
+
+@keyframes onUncheckedRotationBefore {
+  0% {
+    top: 0rem;
+  }
+
+  50% {
+    top: 0rem;
+    transform: rotate(181deg);
+  }
+
+  100% {
+    top: inherit;
+    transform: rotate(-135deg);
+  }
+}
+
+@keyframes onUncheckedRotationAfter {
+  0% {
+    top: 0rem;
+  }
+
+  50% {
+    top: 0rem;
+    transform: rotate(-181deg);
+  }
+
+  100% {
+    top: inherit;
+    transform: rotate(135deg);
+  }
+}
