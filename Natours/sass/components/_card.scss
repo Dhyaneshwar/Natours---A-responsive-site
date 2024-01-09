@@ -4,6 +4,13 @@
   height: 52rem;
   position: relative;
 
+  @include respond(tab-port) {
+    height: auto;
+    background-color: $color-white;
+    border-radius: 3px;
+    box-shadow: 0px 1.5px 4rem rgba($color-black, 0.15);
+  }
+
   &__side {
     background-color: orangered;
     height: 52rem;
@@ -17,11 +24,22 @@
     overflow: hidden;
     box-shadow: 0px 1.5px 4rem rgba($color-black, 0.15);
 
+    @include respond(tab-port) {
+      position: relative;
+      height: auto;
+      box-shadow: none;
+    }
+
     &--front {
       background-color: $color-white;
     }
     &--back {
       transform: rotateY(180deg);
+
+      @include respond(tab-port) {
+        transform: rotateY(0);
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+      }
 
       &-1 {
         background-image: linear-gradient(
@@ -51,7 +69,11 @@
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
+    @include respond(tab-port) {
+      transform: rotateY(0);
+    }
   }
+
   &:hover &__side--back {
     transform: rotateY(0deg);
   }
@@ -135,6 +157,11 @@
 
   &__details {
     padding: 3rem;
+
+    @include respond(tab-port) {
+      padding: 1rem 3rem;
+    }
+
     ul {
       list-style: none;
       width: 80%;
@@ -156,11 +183,23 @@
     text-align: center;
     width: 90%;
     @include absCenter;
+
+    @include respond(tab-port) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
   }
 
   &__price {
     &-box {
       margin-bottom: 8rem;
+      @include respond(tab-port) {
+        margin-bottom: 2rem;
+      }
     }
     &-only {
       font-size: 1.4rem;
@@ -170,6 +209,10 @@
     &-value {
       font-size: 6rem;
       font-weight: 200;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
     }
   }
 }
